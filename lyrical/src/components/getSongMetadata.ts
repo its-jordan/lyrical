@@ -3,13 +3,13 @@ import matter from "gray-matter";
 import { SongMetadata } from "./SongMetadata";
 
 const getSongMetadata = (): SongMetadata[] => {
-  const folder = "songs/";
+  const folder = "src/songs/";
   const files = fs.readdirSync(folder);
   const markdownPages = files.filter((file) => file.endsWith(".md"));
 
   // Get Gray Matter
   const songs = markdownPages.map((fileName) => {
-    const fileContents = fs.readFileSync(`songs/${fileName}`, "utf-8");
+    const fileContents = fs.readFileSync(`src/songs/${fileName}`, "utf-8");
     const matterResult = matter(fileContents);
     return {
       albumArt: matterResult.data.albumArt,
