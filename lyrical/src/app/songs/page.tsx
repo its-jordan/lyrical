@@ -1,5 +1,6 @@
 import getSongMetadata from "../../components/getSongMetadata";
 import SongPreview from "../../components/SongPreview";
+import "../../styles/globals.css";
 
 const SongDir = () => {
   const songMetadata = getSongMetadata();
