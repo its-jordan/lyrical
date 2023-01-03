@@ -1,7 +1,3 @@
----
-date: '01-03-2022'
----
-
 # lyrical
 
 Webapp for song lyrics
